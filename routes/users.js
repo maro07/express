@@ -16,6 +16,7 @@ router.get('/history', function (req, res, next) {
 
 router.get('/newmessages', function (req, res, next) {
   res.send(newmessages);
+  newmessages = false;
 });
 
 router.post('/history', function (req, res, next) {
