@@ -12,11 +12,11 @@ var newmessages = false;
 
 router.get('/history', function (req, res, next) {
   res.send(chatHistory);
+  newmessages = false;
 });
 
 router.get('/newmessages', function (req, res, next) {
   res.send(newmessages);
-  newmessages = false;
 });
 
 router.post('/history', function (req, res, next) {
