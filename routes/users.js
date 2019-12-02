@@ -14,8 +14,8 @@ router.get('/history', function (req, res, next) {
   res.send(chatHistory);
 });
 
-router.get('/', function (req, res, next) {
-  res.json({ change: newmessages });
+router.get('/newmessages', function (req, res, next) {
+  res.send(newmessages);
 });
 
 
