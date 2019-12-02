@@ -14,7 +14,6 @@ router.get('/history', function (req, res, next) {
 });
 
 
-
 router.post('/history', function (req, res, next) {
   var date = new Date();
 
