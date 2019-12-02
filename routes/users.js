@@ -11,7 +11,6 @@ router.get('/', function (req, res, next) {
 
 router.get('/history', function (req, res, next) {
   res.send(chatHistory);
-  chatHistory = [];
 });
 
 
