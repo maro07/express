@@ -15,7 +15,7 @@ router.get('/history', function (req, res, next) {
 });
 
 router.get('/', function (req, res, next) {
-  res.json({ change: 'asdf' });
+  res.json({ change: newmessages });
 });
 
 
