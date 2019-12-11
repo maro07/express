@@ -3,6 +3,7 @@ var router = express.Router();
 
 var chatHistory = [];
 var nicknames = [];
+var anzmsg = 0;
 
 router.get('/', function (req, res, next) { 
   res.json({ message: 'fhs chat-app api works...' }); 
@@ -50,6 +51,11 @@ router.post('/changenickname', function (req, res, next) {
   var idnickname = nicknames.indexOf(nicknames.find(username => username.username === req.body.usernameold));
   nicknames[idnickname].username = req.body.username;
   res.json({ message: "Nickname changed"});
+});
+
+router.get('/historylength', function (req, res, next) {
+  anzmsg = chatHistory.length
+  res.send({'historylength': anzmsg});
 });
 
 module.exports = router;
