@@ -26,6 +26,7 @@ router.get('/nicknames', function (req, res, next) {
   res.send(nicknames);
 });
 
+/*
 router.get('/nicknames/:id', function (req, res, next) {
   let found = false;
   for (var i = 0; nicknames.length > 0 && !found; i++) {
@@ -36,7 +37,7 @@ router.get('/nicknames/:id', function (req, res, next) {
           res.send({ username: nickname.username, id: nickname.id });
       }
   }
-});
+});*/
 
 router.post('/nicknames', function (req, res, next) {
   console.log(req.body);
