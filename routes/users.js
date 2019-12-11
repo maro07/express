@@ -47,7 +47,7 @@ router.post('/nicknames', function (req, res, next) {
 });
 
 router.post('/changenickname', function (req, res, next) {
-  var idnickname = nicknames.indexOf(nicknames.find(username => username.username === req.body.thisrightnow));
+  var idnickname = nicknames.indexOf(nicknames.find(username => username.username === req.body.usernameold));
   nicknames[idnickname].username = req.body.username;
   res.json({ message: "Nickname changed"});
 });
