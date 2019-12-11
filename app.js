@@ -8,7 +8,8 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var allow = ['http://localhost:4200', 'https://blacknwhitechat.herokuapp.com/'];
+var allow = ['http://localhost:4200',
+  'https://blacknwhitechat.herokuapp.com/'];
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -20,8 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //CORS
 app.use(cors({
-  origin: function(origin, callback){
-    if(allow.indexOf(origin) === -1){
+  origin: function (origin, callback) {
+    if (allow.indexOf(origin) === -1) {
       var error = 'What do we say to the hackers? Not today.';
       return callback(new Error(error), false);
     }
@@ -33,12 +34,12 @@ app.use('/', indexRouter);
 app.use('/api', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
