@@ -8,7 +8,7 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var allowedOrigins=['http://localhost:4200', 'http://blacknwhitechat.herokuapp.com/', 'https://blacknwhitechat.herokuapp.com/'];
+var allowedOrigins=['http://localhost:4200', 'http://blacknwhitechat.herokuapp.com', 'https://blacknwhitechat.herokuapp.com'];
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
